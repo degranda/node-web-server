@@ -41,6 +41,12 @@ app.get('/about', (req,res) => {
     pageTitle: 'About page'
   });
 });
+app.use('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Project page',
+    welcomeMessage: 'Esta es la página de projectos de Diego'
+  });
+})
 app.get('/bad', (req,res) => {
   res.send({
     file: 'Not found',
